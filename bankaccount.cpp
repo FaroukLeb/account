@@ -1,4 +1,5 @@
 #include "bankaccount.h"
+#include "bankmanager.h"
 bool bankaccount::deposit(double amount)
 {
 	if (amount <= 0)
@@ -14,4 +15,8 @@ bool bankaccount::withdraw(double amount)
 	balance -= amount;
 	transactions++;
 	return true;
+}
+void bankaccount::createAccount(const string &Full_name)
+{
+	full_name = Full_name;
 }
